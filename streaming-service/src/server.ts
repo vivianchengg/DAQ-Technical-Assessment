@@ -1,5 +1,6 @@
 import net from 'net';
 import { WebSocket, WebSocketServer } from 'ws';
+import { checkTemp } from './check_incident';
 
 const TCP_PORT = parseInt(process.env.TCP_PORT || '12000', 10);
 
@@ -12,20 +13,17 @@ tcpServer.on('connection', (socket) => {
     socket.on('data', (msg) => {
         console.log(msg.toString());
 
-        // HINT: what happens if the JSON in the received message is formatted incorrectly?
-        // HINT: see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
         try {
             let currJSON = JSON.parse(msg.toString());  
+            checkTemp(currJSON.battery_temperature, currJSON.timestamp);
+            websocketServer.clients.forEach(function each(client) {
+                if (client.readyState === WebSocket.OPEN) {
+                    client.send(msg.toString());
+                }
+            });
         } catch(error) {
             console.error(`Invalid Temperature: ${error}`);
-        }
-        
-
-        websocketServer.clients.forEach(function each(client) {
-            if (client.readyState === WebSocket.OPEN) {
-              client.send(msg.toString());
-            }
-          });
+        }   
     });
 
     socket.on('end', () => {
