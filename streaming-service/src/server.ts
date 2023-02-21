@@ -17,7 +17,7 @@ tcpServer.on('connection', (socket) => {
         try {
             let currJSON = JSON.parse(msg.toString());  
         } catch(error) {
-            console.error("Invalid Temperature Format");
+            console.error(`Invalid Temperature: ${error}`);
         }
         
 
