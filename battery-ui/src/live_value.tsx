@@ -6,10 +6,9 @@ interface TemperatureProps {
 }
 
 function LiveValue({ temp } : TemperatureProps) {
-
-  let valueColour = 'green';
+  let valueColour = '#4a7c47';
   if (temp < 20 || temp > 80) {
-    valueColour = 'red';
+    valueColour = '#c23b22';
   }
   
   return (

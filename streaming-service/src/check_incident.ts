@@ -31,8 +31,8 @@ export const checkTemp = (temp: number, time: number) => {
     // when out of range temp appears more than 3 times
     // check whether in 5 seconds
     if (tempRecord.length > 3) {
-        console.log(now);
-        console.log(firstTime);
+        // console.log(now);
+        // console.log(firstTime);
         if (now - firstTime <= interval) {
             logIncident(now);
             // console.log("*****LOGGING TIME*****")

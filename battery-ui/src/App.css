@@ -1,9 +1,11 @@
 .App {
   text-align: center;
+  background-image: url("livebackground.jpeg");
+  background-size: cover;
+  padding-bottom: 200px;
 }
 
 .App-header {
-  background-color: #000000;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -23,9 +25,37 @@
   display: flex;
   align-self: center;
   padding-top: 5%;
+  margin-bottom: 30px;
 }
 
 .value-title {
   font-size: calc(25px + 2vmin);
+  font-weight: bold;
+  color: #194569;
 }
 
+.live-background {
+  background-color:rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  padding: 20px;
+  text-shadow: 1px 1px whitesmoke;
+  font-family: 'futura', monospace;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  font-family: Copperplate, Papyrus, fantasy;
+  text-shadow: 1px 1px black;
+  font-size: 200%;
+}
+
+.redback-text {
+  margin-right: 50px;
+  color: #ec273d;
+}
+
+.racing-text {
+  margin-left: 50px;
+  margin-right: 40px;
+}

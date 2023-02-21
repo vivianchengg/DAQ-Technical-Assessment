@@ -37,11 +37,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <img src={RedbackLogo} className="redback-logo" alt="Redback Racing Logo"/>
-        <p className='value-title'>
-          Live Battery Temperature
-        </p>
-        <LiveValue temp={temperature}/>
+        <div className='top'>
+          <p className='redback-text'>Redback</p>
+          <img src={RedbackLogo} className="redback-logo" alt="Redback Racing Logo"/>
+          <p className='racing-text'>Racing</p>
+        </div>
+        
+        <div className='live-background'>
+          <p className='value-title'>
+            Live Battery Temperature
+          </p>
+          <LiveValue temp={temperature}/>
+        </div>
       </header>
     </div>
   );
