@@ -20,5 +20,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Lint 
-        run: cd ~/home/runner/work/DAQ-Technical-Assessment/
         run: npm run lint
