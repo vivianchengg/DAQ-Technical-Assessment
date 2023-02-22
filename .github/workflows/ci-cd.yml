@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 env:
-  DOCKER_IMAGE_NAME: daq-tech-assessment
+  DOCKER_IMAGE_NAME: vivianchengg/daq-tech-assessment
   DOCKER_IMAGE_TAG: latest
 
 jobs:
