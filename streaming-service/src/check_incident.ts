@@ -24,7 +24,7 @@ export const checkTemp = (temp: number, time: number) => {
     }
 
     // first instance out of range
-    if (tempRecord.length == 1) {
+    if (tempRecord.length === 1) {
         firstTime = time;
     }
 
