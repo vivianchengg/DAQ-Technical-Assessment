@@ -15,7 +15,7 @@
   "scripts": {
     "start": "ts-node src/server.ts",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "keywords": [],
   "author": "",

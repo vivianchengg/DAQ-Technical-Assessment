@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ts-node src/battery_emulator.ts",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "keywords": [],
   "author": "",
