@@ -6,3 +6,6 @@ The format of error message gives error detail after "Invalid Temperature" for b
 
 part 2:
 created another file to export functions. Record the first instance of out of range temperature, keep track of each temperature and their timestamp which are out of range, check whether more than 3 happens within 5 seconds. If so, record current timestamp to the incidents log file. 
+
+part 3:
+updated frontend
