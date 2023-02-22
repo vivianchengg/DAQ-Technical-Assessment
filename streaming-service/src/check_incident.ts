@@ -3,7 +3,7 @@ import fs from 'fs';
 const interval = 5000;
 
 let tempRecord: number[] = [];
-let timeRecord: number[] = [];
+const timeRecord: number[] = [];
 
 const logIncident = (timestamp: number) => {
     const logMsg = `Battery Temperature exceeded Safe Operating Range: ${new Date(timestamp).toISOString()}\n`;

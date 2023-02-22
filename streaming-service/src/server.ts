@@ -14,7 +14,7 @@ tcpServer.on('connection', (socket) => {
         console.log(msg.toString());
 
         try {
-            let currJSON = JSON.parse(msg.toString());  
+            const currJSON = JSON.parse(msg.toString());  
             checkTemp(currJSON.battery_temperature, currJSON.timestamp);
             websocketServer.clients.forEach(function each(client) {
                 if (client.readyState === WebSocket.OPEN) {
