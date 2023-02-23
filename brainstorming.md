@@ -9,3 +9,6 @@ created another file to export functions. Record the first instance of out of ra
 
 part 3:
 updated frontend
+
+part 4:
+the extension task! aboslutely new to cloud ci/cd but the pipelines running yeah! It helps a lot dividing the 4 tasks into 2 half, so I did linting, unit testing before I managed the rest.
