@@ -2,7 +2,8 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - main
 
 env:
   DOCKER_IMAGE_NAME: vivianchengg/daq-tech-assessment
